@@ -6,6 +6,7 @@ It is a three-phase non-invasive wattmeter with a DIN rail measuring coil. It co
 ![DSM630MCT](https://github.com/peca2345/ESPHome-modbus-wattmeter-DSM630MCT/blob/main/IMG/DSM630MCT_.png?raw=true)
 
 ## Info:
+- I do not recommend buying an unnecessary large clamp - 100A is really huge!
 - use only shielded cable, otherwise the error "Modbus CRC Check Failed!" may appear in the log.
 - put a 120 ohm resistor after the last connected device
 - modbus datasheet: [DSM630MCT](https://github.com/peca2345/ESPHome-modbus-wattmeter-DSM630MCT/blob/main/IMG/DSM630MCT_3_phase_wattmeter_datasheet.pdf)
