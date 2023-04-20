@@ -14,3 +14,14 @@ It is a three-phase non-invasive wattmeter with a DIN rail measuring coil. It co
 - for addresses that are write use the "number" class (you can then change their values in lovelace)
 - for each register you want to have in HA you have to create a separate sensor in ESPHome
 -as long as the address of the device is the same as some sensor, it doesn't matter
+
+## Components:
+- ESP8266 / ESP32
+- RS485/TTL converter: [SHOP](https://www.laskakit.cz/prevodnik-ttl-na-rs-485--max485/) 
+
+## Schematic ESP32:
+![Schema](https://github.com/peca2345/ESPHome-modbus-heatpump-Gree-Versati-III/blob/main/IMG/schematic2.png?raw=true)
+
+## Schematic ESP8266 - Wemos D1 mini:
+![Schema](https://github.com/peca2345/ESPHome-modbus-heatpump-Gree-Versati-III/blob/main/IMG/schematic_wemos.png?raw=true)
+
