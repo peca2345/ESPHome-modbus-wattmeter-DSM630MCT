@@ -84,8 +84,8 @@ It is a three-phase non-invasive wattmeter with a DIN rail measuring coil. It co
 ```
 uart:
   id: mod_bus
-  rx_pin: GPIO13
-  tx_pin: GPIO16
+  rx_pin: GPIO17 # change according to your wiring
+  tx_pin: GPIO16 # change according to your wiring
   baud_rate: 9600
   stop_bits: 1
 
