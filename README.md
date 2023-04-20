@@ -429,93 +429,76 @@ sensor:
     unit_of_measurement: "kVarh"
     register_type: holding
     value_type: U_WORD
-
-
-## WATER FLOW METER ##############################
-  - platform: pulse_counter
-    pin: GPIO35
-    unit_of_measurement: 'L/min'
-    accuracy_decimals: 1
-    update_interval: 60s
-    name: 'e16s-water-sensor'
-    filters:
-    - lambda: return (x / 27.0);  
-    total:
-      unit_of_measurement: 'L'
-      name: 'e16s-water-sensor-total'
-      accuracy_decimals: 1
-      filters:
-      - lambda: return (x / 27.0);
 ```
 
 ## Lovelace code:
 ```
 type: entities
 entities:
-  - entity: sensor.z_jankovi_kc868_e16s_wattmeter_home_a_phase_active_power
+  - entity: sensor.kc868_e16s_wattmeter_home_a_phase_active_power
     name: A phase power
-  - entity: sensor.z_jankovi_kc868_e16s_wattmeter_home_a_phase_apparent_power
+  - entity: sensor.kc868_e16s_wattmeter_home_a_phase_apparent_power
     name: A phase apparent power
-  - entity: sensor.z_jankovi_kc868_e16s_wattmeter_home_a_phase_current
+  - entity: sensor.kc868_e16s_wattmeter_home_a_phase_current
     name: A phase current
-  - entity: sensor.z_jankovi_kc868_e16s_wattmeter_home_a_phase_frequency
+  - entity: sensor.kc868_e16s_wattmeter_home_a_phase_frequency
     name: A phase frequency
-  - entity: sensor.z_jankovi_kc868_e16s_wattmeter_home_a_phase_line_voltage
+  - entity: sensor.kc868_e16s_wattmeter_home_a_phase_line_voltage
     name: A phase line voltage
-  - entity: sensor.z_jankovi_kc868_e16s_wattmeter_home_a_phase_power_factor
+  - entity: sensor.kc868_e16s_wattmeter_home_a_phase_power_factor
     name: A phase power factor
-  - entity: sensor.z_jankovi_kc868_e16s_wattmeter_home_a_phase_reactive_power
+  - entity: sensor.kc868_e16s_wattmeter_home_a_phase_reactive_power
     name: A phase reactive power
-  - entity: sensor.z_jankovi_kc868_e16s_wattmeter_home_a_phase_voltage
+  - entity: sensor.kc868_e16s_wattmeter_home_a_phase_voltage
     name: A phase voltage
-  - entity: sensor.z_jankovi_kc868_e16s_wattmeter_home_b_phase_active_power
+  - entity: sensor.kc868_e16s_wattmeter_home_b_phase_active_power
     name: B phase power
-  - entity: sensor.z_jankovi_kc868_e16s_wattmeter_home_b_phase_apparent_power
+  - entity: sensor.kc868_e16s_wattmeter_home_b_phase_apparent_power
     name: B phase apparent power
-  - entity: sensor.z_jankovi_kc868_e16s_wattmeter_home_b_phase_current
+  - entity: sensor.kc868_e16s_wattmeter_home_b_phase_current
     name: B phase current
-  - entity: sensor.z_jankovi_kc868_e16s_wattmeter_home_b_phase_frequency
+  - entity: sensor.kc868_e16s_wattmeter_home_b_phase_frequency
     name: B phase frequency
-  - entity: sensor.z_jankovi_kc868_e16s_wattmeter_home_b_phase_line_voltage
+  - entity: sensor.kc868_e16s_wattmeter_home_b_phase_line_voltage
     name: B phase line voltage
-  - entity: sensor.z_jankovi_kc868_e16s_wattmeter_home_b_phase_power_factor
+  - entity: sensor.kc868_e16s_wattmeter_home_b_phase_power_factor
     name: B phase power factor
-  - entity: sensor.z_jankovi_kc868_e16s_wattmeter_home_b_phase_reactive_power
+  - entity: sensor.kc868_e16s_wattmeter_home_b_phase_reactive_power
     name: B phase reactive power
-  - entity: sensor.z_jankovi_kc868_e16s_wattmeter_home_b_phase_voltage
+  - entity: sensor.kc868_e16s_wattmeter_home_b_phase_voltage
     name: B phase voltage
-  - entity: sensor.z_jankovi_kc868_e16s_wattmeter_home_c_phase_active_power
+  - entity: sensor.kc868_e16s_wattmeter_home_c_phase_active_power
     name: C phase power
-  - entity: sensor.z_jankovi_kc868_e16s_wattmeter_home_c_phase_apparent_power
+  - entity: sensor.kc868_e16s_wattmeter_home_c_phase_apparent_power
     name: C phase apparent power
-  - entity: sensor.z_jankovi_kc868_e16s_wattmeter_home_c_phase_current
+  - entity: sensor.kc868_e16s_wattmeter_home_c_phase_current
     name: C phase current
-  - entity: sensor.z_jankovi_kc868_e16s_wattmeter_home_c_phase_frequency
+  - entity: sensor.kc868_e16s_wattmeter_home_c_phase_frequency
     name: C phase frequency
-  - entity: sensor.z_jankovi_kc868_e16s_wattmeter_home_c_phase_line_voltage
+  - entity: sensor.kc868_e16s_wattmeter_home_c_phase_line_voltage
     name: C phase line voltage
-  - entity: sensor.z_jankovi_kc868_e16s_wattmeter_home_c_phase_power_factor
+  - entity: sensor.kc868_e16s_wattmeter_home_c_phase_power_factor
     name: C phase power factor
-  - entity: sensor.z_jankovi_kc868_e16s_wattmeter_home_c_phase_reactive_power
+  - entity: sensor.kc868_e16s_wattmeter_home_c_phase_reactive_power
     name: C phase reactive power
-  - entity: sensor.z_jankovi_kc868_e16s_wattmeter_home_c_phase_voltage
+  - entity: sensor.kc868_e16s_wattmeter_home_c_phase_voltage
     name: C phase voltage
-  - entity: sensor.z_jankovi_kc868_e16s_wattmeter_home_forward_active_energy
+  - entity: sensor.kc868_e16s_wattmeter_home_forward_active_energy
     name: Forward active energy
-  - entity: sensor.z_jankovi_kc868_e16s_wattmeter_home_forward_reactive_energy
+  - entity: sensor.kc868_e16s_wattmeter_home_forward_reactive_energy
     name: Forward reactive energy
-  - entity: sensor.z_jankovi_kc868_e16s_wattmeter_home_neutral_current
+  - entity: sensor.kc868_e16s_wattmeter_home_neutral_current
     name: Neutral current
-  - entity: sensor.z_jankovi_kc868_e16s_wattmeter_home_reverse_active_energy
+  - entity: sensor.kc868_e16s_wattmeter_home_reverse_active_energy
     name: Reverse active energy
-  - entity: sensor.z_jankovi_kc868_e16s_wattmeter_home_reverse_reactive_energy
+  - entity: sensor.kc868_e16s_wattmeter_home_reverse_reactive_energy
     name: Reverse reactive energy
-  - entity: sensor.z_jankovi_kc868_e16s_wattmeter_home_total_active_power
+  - entity: sensor.kc868_e16s_wattmeter_home_total_active_power
     name: Total active power
-  - entity: sensor.z_jankovi_kc868_e16s_wattmeter_home_total_apparent_power
+  - entity: sensor.kc868_e16s_wattmeter_home_total_apparent_power
     name: Total apparent power
-  - entity: sensor.z_jankovi_kc868_e16s_wattmeter_home_total_power_factor
+  - entity: sensor.kc868_e16s_wattmeter_home_total_power_factor
     name: Total power factor
-  - entity: sensor.z_jankovi_kc868_e16s_wattmeter_home_total_reactive_power
+  - entity: sensor.kc868_e16s_wattmeter_home_total_reactive_power
     name: Total reactive power
 ```
