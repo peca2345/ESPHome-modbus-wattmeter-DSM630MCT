@@ -1,4 +1,4 @@
-# ESPHome modbus - 3F CLAMP DIN Wattmeter - DSM630MCT
+# ESPHome modbus - 3F DIN Wattmeter - DSM630MCT
 
 ## Description:
 It is a three-phase non-invasive wattmeter with a DIN rail measuring coil. It communicates via modbus protocol via ESP8266/ESP32 to LAN. The program is written using ESPHome and is fully integrated into Home Assistant. It is a cheap alternative to, for example, Shelly 3EM.
