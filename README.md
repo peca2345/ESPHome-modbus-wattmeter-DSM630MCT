@@ -3,7 +3,7 @@
 ## Description:
 It is a three-phase non-invasive wattmeter with a DIN rail measuring coil. It communicates via modbus protocol via ESP8266/ESP32 to LAN. The program is written using ESPHome and is fully integrated into Home Assistant. It is a cheap alternative to, for example, Shelly 3EM.
 
-![DSM630MCT](https://github.com/peca2345/ESPHome-modbus-wattmeter-DSM630MCT/blob/main/IMG/DSM630MCT.png?raw=true)
+![DSM630MCT](https://github.com/peca2345/ESPHome-modbus-wattmeter-DSM630MCT/blob/main/IMG/DSM630MCT_.png?raw=true)
 
 ## Info:
 - use only shielded cable, otherwise the error "Modbus CRC Check Failed!" may appear in the log.
