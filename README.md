@@ -28,7 +28,46 @@ It is a three-phase non-invasive wattmeter with a DIN rail measuring coil. It co
 ## Wiring:
 ![Wiring](https://github.com/peca2345/ESPHome-modbus-wattmeter-DSM630MCT/blob/main/IMG/schema.jpg?raw=true)
 
-
+## Modbus address:
+```
+0x00  A-phase voltage         XXX.X V 
+0x01  B-phase voltage         XXX.X_V 
+0x02  C-phase voltage         XXX.X V 
+0x03  A phase current         XXX.X A 
+0x04  B phase current         XXX.X A 
+0x05  C phase current         XXX.X A 
+0x06  Neutral current         XXX.X A
+0x07  Total active power      XXXX W 
+0x08  A-phase active power    XXXX W 
+0x09  B-phase active power    XXXX W 
+0x0A  C-phase active power    XXXX W 
+0x08  Total reactive power    XXXX Var 
+0x0C  A-phase reactive power  XXXX Var 
+0x0D  B-phase reactive power  XXXX Var 
+0x0E  C-Phase reactive power  XXXX Var 
+0x0F  Total apparent power    XXXX VA 
+0x10  A-phase apparent power  XXXX VA 
+0x11  B-phase apparent power  XXXX VA 
+0xl2  C-phase apparent power  XXXX VA 
+0x13  Total Power Factor      XXXX 
+0x14  A-phase power factor    XX.XX 
+0x15  B-phase power factar    XX.XX 
+0x16  C-phase power factor    XX.XX 
+0x17  A phase line voltage    XXX.X V 
+0x18  B-phase line voltage    XXX.X V 
+0x19  C phase line voltage    XXX.X V 
+0x1A  A-phase frequency       XX.XX HZ 
+0x1B  B-phase frequency       XX.XX HZ 
+0x1C  C-phase frequency       XX.XX HZ 
+0x1D  Forward active energy   XX.XX KWH 
+0x1E  Forward active energy   XX.XX KWH  
+0x1F  Reverse active energy   XX.XX KWH 
+0x20  Reverse active energy   XX.XX KWH 
+0x21  Forward reactive energy XXX KVarh 
+0x22  Forward reactive energy XXX KVarh 
+0x23  Reverse reactive eneray XXX KVarh 
+0x24  Reverse reactive energy XXX KVarh 
+```
 ## ESPHome code:
 ```
 uart:
