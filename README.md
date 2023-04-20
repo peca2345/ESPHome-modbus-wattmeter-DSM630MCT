@@ -13,7 +13,8 @@ It is a three-phase non-invasive wattmeter with a DIN rail measuring coil. It co
 - for addresses that are read use the "sensor" class
 - for addresses that are write use the "number" class (you can then change their values in lovelace)
 - for each register you want to have in HA you have to create a separate sensor in ESPHome
--as long as the address of the device is the same as some sensor, it doesn't matter
+- as long as the address of the device is the same as some sensor, it doesn't matter
+- no need to set the wattmeter - works with default address 0x01
 
 ## Components:
 - ESP8266 / ESP32
@@ -29,6 +30,10 @@ It is a three-phase non-invasive wattmeter with a DIN rail measuring coil. It co
 ![Wiring](https://github.com/peca2345/ESPHome-modbus-wattmeter-DSM630MCT/blob/main/IMG/schema.jpg?raw=true)
 
 ## Modbus address:
+```
+0x01  Wattmeter default address
+```
+
 ```
 0x00  A-phase voltage         XXX.X V 
 0x01  B-phase voltage         XXX.X_V 
