@@ -6,10 +6,10 @@ It is a three-phase non-invasive wattmeter with a DIN rail measuring coil. It co
 ![DSM630MCT](https://github.com/peca2345/ESPHome-modbus-wattmeter-DSM630MCT/blob/main/IMG/DSM630MCT_.png?raw=true)
 
 ## Info:
+- modbus datasheet: [DSM630MCT](https://github.com/peca2345/ESPHome-modbus-wattmeter-DSM630MCT/blob/main/IMG/DSM630MCT_3_phase_wattmeter_datasheet.pdf)
 - I do not recommend buying an unnecessary large clamp - 100A is really huge!
 - use only shielded cable, otherwise the error "Modbus CRC Check Failed!" may appear in the log.
 - put a 120 ohm resistor after the last connected device
-- modbus datasheet: [DSM630MCT](https://github.com/peca2345/ESPHome-modbus-wattmeter-DSM630MCT/blob/main/IMG/DSM630MCT_3_phase_wattmeter_datasheet.pdf)
 - you have to find out what the wattmeter address is - default is 0x01
 - you also need to find out the serial port speed - default 9600
 - in ESPHome use the sensor class only for addresses that are read-only
