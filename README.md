@@ -24,6 +24,7 @@ It is a three-phase non-invasive wattmeter with a DIN rail measuring coil. It co
 ## Components:
 - ESP8266 / ESP32
 - RS485/TTL converter: [SHOP](https://www.laskakit.cz/prevodnik-ttl-na-rs-485--max485/) 
+- RS485/TTL converter (better): [SHOP](https://pajenicko.cz/prevodnik-max485-s-prepetovou-ochranou-ttl-na-rs-485)  
 - Wattmeter DSM630MCT: [SHOP](https://www.aliexpress.com/item/1005004059758839.html?dp=60884bf2d2ed5efc7c969b20&cn=ah&aff_fcid=f70ab32472014c52a8e7cedd4dd3921e-1682023557871-06550-_sSETun&aff_fsk=_sSETun&aff_platform=link-c-tool&sk=_sSETun&aff_trace_key=f70ab32472014c52a8e7cedd4dd3921e-1682023557871-06550-_sSETun&terminal_id=153e61cce3cb4f32a9ecb3735d8d5ed6&afSmartRedirect=y) 
 
 ## Schematic ESP32:
