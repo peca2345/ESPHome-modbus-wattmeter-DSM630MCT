@@ -4,6 +4,7 @@
 It is a three-phase non-invasive wattmeter with a DIN rail measuring coil. It communicates via modbus protocol via ESP8266/ESP32 to LAN. The program is written using ESPHome and is fully integrated into Home Assistant. It is a cheap alternative to, for example Shelly 3EM.
 
 ![DSM630MCT](https://github.com/peca2345/ESPHome-modbus-wattmeter-DSM630MCT/blob/main/IMG/DSM630MCT_.png?raw=true)
+![Lovelace](https://github.com/peca2345/ESPHome-modbus-wattmeter-DSM630MCT/blob/main/IMG/lovelace_screen.png?raw=true)
 
 ## Info:
 - modbus datasheet: [DSM630MCT](https://github.com/peca2345/ESPHome-modbus-wattmeter-DSM630MCT/blob/main/IMG/DSM630MCT_3_phase_wattmeter_datasheet.pdf)
@@ -33,8 +34,9 @@ It is a three-phase non-invasive wattmeter with a DIN rail measuring coil. It co
 ## Wiring:
 ![Wiring](https://github.com/peca2345/ESPHome-modbus-wattmeter-DSM630MCT/blob/main/IMG/schema.jpg?raw=true)
 
-## Lovelace:
-![Lovelace](https://github.com/peca2345/ESPHome-modbus-wattmeter-DSM630MCT/blob/main/IMG/lovelace_screen.png?raw=true)
+## Set clamp:
+![settings](https://github.com/peca2345/ESPHome-modbus-wattmeter-DSM630MCT/blob/main/IMG/settings.png?raw=true)
+
 
 ## Modbus address:
 ```
