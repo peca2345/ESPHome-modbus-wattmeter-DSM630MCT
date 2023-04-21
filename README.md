@@ -101,83 +101,85 @@ modbus_controller:
     # setup_priority: -10
     update_interval: 60s
     
+
 sensor:
   # WATTMETR HOME - A phase voltage
   - platform: modbus_controller
     modbus_controller_id: wattmetr_home
-    name: "wattmeter-home-A-phase Voltage"
+    name: "home-wattmetr-A-phase Voltage"
     address: 0x00
     unit_of_measurement: "V"
     register_type: holding
     value_type: U_WORD
-    accuracy_decimals: 1
+    accuracy_decimals: 0
     filters:
       - multiply: 0.1 
+
 
   # WATTMETR HOME - B phase voltage
   - platform: modbus_controller
     modbus_controller_id: wattmetr_home
-    name: "wattmeter-home-B-phase Voltage"
+    name: "home-wattmetr-B-phase Voltage"
     address: 0x01
     unit_of_measurement: "V"
     register_type: holding
     value_type: U_WORD
-    accuracy_decimals: 1
+    accuracy_decimals: 0
     filters:
       - multiply: 0.1
 
   # WATTMETR HOME - C phase voltage
   - platform: modbus_controller
     modbus_controller_id: wattmetr_home
-    name: "wattmeter-home-C-phase Voltage"
+    name: "home-wattmetr-C-phase Voltage"
     address: 0x02
     unit_of_measurement: "V"
     register_type: holding
     value_type: U_WORD
-    accuracy_decimals: 1
+    accuracy_decimals: 0
     filters:
       - multiply: 0.1
 
   # WATTMETR HOME - A phase current
   - platform: modbus_controller
     modbus_controller_id: wattmetr_home
-    name: "wattmeter-home-A-phase Current"
+    name: "home-wattmetr-A-phase Current"
     address: 0x03
     unit_of_measurement: "A"
     register_type: holding
     value_type: U_WORD
     accuracy_decimals: 1
     filters:
-      - multiply: 0.1
+      - multiply: 0.01
 
   # WATTMETR HOME - B phase current
   - platform: modbus_controller
     modbus_controller_id: wattmetr_home
-    name: "wattmeter-home-B-phase Current"
+    name: "home-wattmetr-B-phase Current"
     address: 0x04
     unit_of_measurement: "A"
     register_type: holding
     value_type: U_WORD
     accuracy_decimals: 1
     filters:
-      - multiply: 0.1
+      - multiply: 0.01
 
   # WATTMETR HOME - C phase current
   - platform: modbus_controller
     modbus_controller_id: wattmetr_home
-    name: "wattmeter-home-C-phase Current"
+    name: "home-wattmetr-C-phase Current"
     address: 0x05
     unit_of_measurement: "A"
     register_type: holding
     value_type: U_WORD
     accuracy_decimals: 1
     filters:
-      - multiply: 0.1
+      - multiply: 0.01
 
   # WATTMETR HOME - Neutral current
   - platform: modbus_controller
     modbus_controller_id: wattmetr_home
-    name: "wattmeter-home-Neutral Current"
+    name: "home-wattmetr-Neutral Current"
     address: 0x06
     unit_of_measurement: "A"
     register_type: holding
@@ -189,43 +191,51 @@ sensor:
   # Total active power
   - platform: modbus_controller
     modbus_controller_id: wattmetr_home
-    name: "wattmeter-home-Total Active Power"
+    name: "home-wattmetr-Total Active Power"
     address: 0x07
     unit_of_measurement: "W"
     register_type: holding
     value_type: U_WORD
+    filters:
+      multiply: 10
 
   # A-phase active power
   - platform: modbus_controller
     modbus_controller_id: wattmetr_home
-    name: "wattmeter-home-A-phase Active Power"
+    name: "home-wattmetr-A-phase Active Power"
     address: 0x08
     unit_of_measurement: "W"
     register_type: holding
     value_type: U_WORD
-
+    filters:
+      multiply: 10
+      
   # B-phase active power
   - platform: modbus_controller
     modbus_controller_id: wattmetr_home
-    name: "wattmeter-home-B-phase Active Power"
+    name: "home-wattmetr-B-phase Active Power"
     address: 0x09
     unit_of_measurement: "W"
     register_type: holding
     value_type: U_WORD
+    filters:
+      multiply: 10
 
   # C-phase active power
   - platform: modbus_controller
     modbus_controller_id: wattmetr_home
-    name: "wattmeter-home-C-phase Active Power"
+    name: "home-wattmetr-C-phase Active Power"
     address: 0x0A
     unit_of_measurement: "W"
     register_type: holding
     value_type: U_WORD
-
+    filters:
+      multiply: 10
+      
   # Total reactive power
   - platform: modbus_controller
     modbus_controller_id: wattmetr_home
-    name: "wattmeter-home-Total Reactive Power"
+    name: "home-wattmetr-Total Reactive Power"
     address: 0x08
     unit_of_measurement: "Var"
     register_type: holding
@@ -234,7 +244,7 @@ sensor:
   # WATTMETR HOME - A-phase reactive power
   - platform: modbus_controller
     modbus_controller_id: wattmetr_home
-    name: "wattmeter-home-A-phase Reactive Power"
+    name: "home-wattmetr-A-phase Reactive Power"
     address: 0x0C
     unit_of_measurement: "Var"
     register_type: holding
@@ -243,7 +253,7 @@ sensor:
   # WATTMETR HOME - B-phase reactive power
   - platform: modbus_controller
     modbus_controller_id: wattmetr_home
-    name: "wattmeter-home-B-phase Reactive Power"
+    name: "home-wattmetr-B-phase Reactive Power"
     address: 0x0D
     unit_of_measurement: "Var"
     register_type: holding
@@ -252,7 +262,7 @@ sensor:
   # WATTMETR HOME - C-phase reactive power
   - platform: modbus_controller
     modbus_controller_id: wattmetr_home
-    name: "wattmeter-home-C-phase Reactive Power"
+    name: "home-wattmetr-C-phase Reactive Power"
     address: 0x0E
     unit_of_measurement: "Var"
     register_type: holding
@@ -261,7 +271,7 @@ sensor:
   # WATTMETR HOME - Total apparent power
   - platform: modbus_controller
     modbus_controller_id: wattmetr_home
-    name: "wattmeter-home-Total Apparent Power"
+    name: "home-wattmetr-Total Apparent Power"
     address: 0x0F
     unit_of_measurement: "VA"
     register_type: holding
@@ -270,7 +280,7 @@ sensor:
   # WATTMETR HOME - A-phase apparent power
   - platform: modbus_controller
     modbus_controller_id: wattmetr_home
-    name: "wattmeter-home-A-phase Apparent Power"
+    name: "home-wattmetr-A-phase Apparent Power"
     address: 0x10
     unit_of_measurement: "VA"
     register_type: holding
@@ -279,7 +289,7 @@ sensor:
   # WATTMETR HOME - B-phase apparent power
   - platform: modbus_controller
     modbus_controller_id: wattmetr_home
-    name: "wattmeter-home-B-phase Apparent Power"
+    name: "home-wattmetr-B-phase Apparent Power"
     address: 0x11
     unit_of_measurement: "VA"
     register_type: holding
@@ -288,7 +298,7 @@ sensor:
   # WATTMETR HOME - C-phase apparent power
   - platform: modbus_controller
     modbus_controller_id: wattmetr_home
-    name: "wattmeter-home-C-phase Apparent Power"
+    name: "home-wattmetr-C-phase Apparent Power"
     address: 0x12
     unit_of_measurement: "VA"
     register_type: holding
@@ -297,46 +307,55 @@ sensor:
   # WATTMETR HOME - Total Power Factor
   - platform: modbus_controller
     modbus_controller_id: wattmetr_home
-    name: "wattmeter-home-Total Power Factor"
+    name: "home-wattmetr-Total Power Factor"
     address: 0x13
-    unit_of_measurement: "%"
+    unit_of_measurement: "φ"
     value_type: U_WORD
     register_type: holding
+    accuracy_decimals: 2
+    filters:
+      - multiply: 0.001
 
   # WATTMETR HOME - A-phase power factor
   - platform: modbus_controller
     modbus_controller_id: wattmetr_home
-    name: "wattmeter-home-A-phase Power Factor"
+    name: "home-wattmetr-A-phase Power Factor"
     address: 0x14
-    unit_of_measurement: "Hz"
+    unit_of_measurement: "φ"
     register_type: holding
     value_type: U_WORD
     accuracy_decimals: 2
+    filters:
+      - multiply: 0.001
 
   # WATTMETR HOME - B-phase power factor
   - platform: modbus_controller
     modbus_controller_id: wattmetr_home
-    name: "wattmeter-home-B-phase Power Factor"
+    name: "home-wattmetr-B-phase Power Factor"
     address: 0x15
-    unit_of_measurement: "Hz"
+    unit_of_measurement: "φ"
     register_type: holding
     value_type: U_WORD
     accuracy_decimals: 2
+    filters:
+      - multiply: 0.001
 
   # WATTMETR HOME - C-phase power factor
   - platform: modbus_controller
     modbus_controller_id: wattmetr_home
-    name: "wattmeter-home-C-phase Power Factor"
+    name: "home-wattmetr-C-phase Power Factor"
     address: 0x16
-    unit_of_measurement: "%"
+    unit_of_measurement: "φ"
     register_type: holding
     value_type: U_WORD
     accuracy_decimals: 2
+    filters:
+      - multiply: 0.001
 
   # WATTMETR HOME - A phase-to-line voltage
   - platform: modbus_controller
     modbus_controller_id: wattmetr_home
-    name: "wattmeter-home-A-phase Line Voltage"
+    name: "home-wattmetr-A-phase Line Voltage"
     address: 0x17
     unit_of_measurement: "V"
     register_type: holding
@@ -348,7 +367,7 @@ sensor:
   # WATTMETR HOME - B-phase line voltage
   - platform: modbus_controller
     modbus_controller_id: wattmetr_home
-    name: "wattmeter-home-B-phase Line Voltage"
+    name: "home-wattmetr-B-phase Line Voltage"
     address: 0x18
     unit_of_measurement: "V"
     register_type: holding
@@ -360,7 +379,7 @@ sensor:
   # WATTMETR HOME - C-phase line voltage
   - platform: modbus_controller
     modbus_controller_id: wattmetr_home
-    name: "wattmeter-home-C-phase Line Voltage"
+    name: "home-wattmetr-C-phase Line Voltage"
     address: 0x19
     unit_of_measurement: "V"
     register_type: holding
@@ -372,7 +391,7 @@ sensor:
   # WATTMETR HOME - A-phase frequency
   - platform: modbus_controller
     modbus_controller_id: wattmetr_home
-    name: "wattmeter-home-A-phase Frequency"
+    name: "home-wattmetr-A-phase Frequency"
     address: 0x1A
     unit_of_measurement: "Hz"
     register_type: holding
@@ -384,7 +403,7 @@ sensor:
   # WATTMETR HOME - B-phase frequency
   - platform: modbus_controller
     modbus_controller_id: wattmetr_home
-    name: "wattmeter-home-B-phase Frequency"
+    name: "home-wattmetr-B-phase Frequency"
     address: 0x1B
     unit_of_measurement: "Hz"
     register_type: holding
@@ -396,7 +415,7 @@ sensor:
   # WATTMETR HOME - C-phase frequency
   - platform: modbus_controller
     modbus_controller_id: wattmetr_home
-    name: "wattmeter-home-C-phase Frequency"
+    name: "home-wattmetr-C-phase Frequency"
     address: 0x1C
     unit_of_measurement: "Hz"
     register_type: holding
@@ -408,78 +427,90 @@ sensor:
   # WATTMETR HOME - Forward active energy (high 16 bits)
   - platform: modbus_controller
     modbus_controller_id: wattmetr_home
-    name: "wattmeter-home-Forward Active Energy"
+    name: "home-wattmetr-Forward Active Energy High"
     address: 0x1D
     unit_of_measurement: "kWh"
     register_type: holding
     value_type: U_WORD
-
+    filters:
+      - multiply: 0.01
 
   # WATTMETR HOME - Forward active energy (lower 16 bits)
   - platform: modbus_controller
     modbus_controller_id: wattmetr_home
-    name: "wattmeter-home-Forward Active Energy"
+    name: "home-wattmetr-Forward Active Energy Lower"
     address: 0x1E
     unit_of_measurement: "kWh"
     register_type: holding
     value_type: U_WORD
-
+    filters:
+      - multiply: 0.01
 
   # WATTMETR HOME - Reverse active energy (high 16 bits)
   - platform: modbus_controller
     modbus_controller_id: wattmetr_home
-    name: "wattmeter-home-Reverse Active Energy"
+    name: "home-wattmetr-Reverse Active Energy High"
     address: 0x1F
     unit_of_measurement: "kWh"
     register_type: holding
     value_type: U_WORD
-
+    filters:
+      - multiply: 0.01
 
   # WATTMETR HOME - Reverse active energy (lower 16 bits)
   - platform: modbus_controller
     modbus_controller_id: wattmetr_home
-    name: "wattmeter-home-Reverse Active Energy"
+    name: "home-wattmetr-Reverse Active Energy Lower"
     address: 0x20
     unit_of_measurement: "kWh"
     register_type: holding
     value_type: U_WORD
+    filters:
+      - multiply: 0.01
 
   # WATTMETR HOME - Forward reactive energy (high 16 bits)
   - platform: modbus_controller
     modbus_controller_id: wattmetr_home
-    name: "wattmeter-home-Forward Reactive Energy"
+    name: "home-wattmetr-Forward Reactive Energy High"
     address: 0x21
     unit_of_measurement: "kVarh"
     register_type: holding
     value_type: U_WORD
-
+    filters:
+      - multiply: 0.01
 
   # WATTMETR HOME - Forward reactive energy (lower 16 bits)
   - platform: modbus_controller
     modbus_controller_id: wattmetr_home
-    name: "wattmeter-home-Forward Reactive Energy"
+    name: "home-wattmetr-Forward Reactive Energy Lower"
     address: 0x22
     unit_of_measurement: "kVarh"
     register_type: holding
     value_type: U_WORD
+    filters:
+      - multiply: 0.01
 
   # WATTMETR HOME - Reverse reactive energy (high 16 bits)
   - platform: modbus_controller
     modbus_controller_id: wattmetr_home
-    name: "wattmeter-home-Reverse Reactive Energy"
+    name: "home-wattmetr-Reverse Reactive Energy High"
     address: 0x23
     unit_of_measurement: "kVarh"
     register_type: holding
     value_type: U_WORD
+    filters:
+      - multiply: 0.01
 
   # WATTMETR HOME - Reverse reactive energy (lower 16 bits)
   - platform: modbus_controller
     modbus_controller_id: wattmetr_home
-    name: "wattmeter-home-Reverse Reactive Energy"
+    name: "home-wattmetr-Reverse Reactive Energy Lower"
     address: 0x24
     unit_of_measurement: "kVarh"
     register_type: holding
-    value_type: U_WORD
+    value_type: U_WORD      
+    filters:
+      - multiply: 0.01    
 ```
 
 ## Lovelace card:
