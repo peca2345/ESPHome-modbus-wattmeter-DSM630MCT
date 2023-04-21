@@ -9,6 +9,7 @@ It is a three-phase non-invasive wattmeter with a DIN rail measuring coil. It co
 ## Info:
 - modbus datasheet: [DSM630MCT](https://github.com/peca2345/ESPHome-modbus-wattmeter-DSM630MCT/blob/main/IMG/DSM630MCT_3_phase_wattmeter_datasheet.pdf)
 - I do not recommend buying an unnecessary large clamp - 100A is really huge!
+- on the wattmeter you have to set the transformer type to make an accurate measurement
 - use only shielded cable, otherwise the error "Modbus CRC Check Failed!" may appear in the log.
 - put a 120 ohm resistor after the last connected device
 - you have to find out what the wattmeter address is - default is 0x01
@@ -18,7 +19,7 @@ It is a three-phase non-invasive wattmeter with a DIN rail measuring coil. It co
 - for addresses that are write use the "number" class (you can then change their values in lovelace)
 - for each register you want to have in HA you have to create a separate sensor in ESPHome
 - as long as the address of the device is the same as some sensor, it doesn't matter
-- no need to set the wattmeter - works with default address 0x01
+- wattmeter works with default address 0x01
 
 ## Components:
 - ESP8266 / ESP32
