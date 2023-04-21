@@ -36,7 +36,7 @@ It is a three-phase non-invasive wattmeter with a DIN rail measuring coil. It co
 ## Wiring:
 ![Wiring](https://github.com/peca2345/ESPHome-modbus-wattmeter-DSM630MCT/blob/main/IMG/schema.jpg?raw=true)
 
-## Set clamp:
+## Transformer size setting:
 ![settings](https://github.com/peca2345/ESPHome-modbus-wattmeter-DSM630MCT/blob/main/IMG/settings.png?raw=true)
 
 
